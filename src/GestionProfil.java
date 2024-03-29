@@ -23,7 +23,7 @@ public class GestionProfil extends JInternalFrame {
     GestionProfil() {
         this.setTitle("Gestion Profil ");
         this.setSize(900, 400);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         this.setClosable(true);
         this.setResizable(true);

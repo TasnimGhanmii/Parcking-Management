@@ -1,4 +1,4 @@
-package TP4EX2;
+/*package TP4EX2;
 
 public class Enseignant {
 
@@ -58,4 +58,4 @@ public class Enseignant {
     public void setCertification(boolean certification) {
         this.certification = certification;
     }
-}
+}*/
