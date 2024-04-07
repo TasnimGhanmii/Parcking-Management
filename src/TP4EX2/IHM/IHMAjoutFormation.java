@@ -67,7 +67,7 @@ public class IHMAjoutFormation extends JFrame {
         getContentPane().add(panel);
         setSize(500,250);
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setVisible(true);
     }
 
@@ -83,8 +83,6 @@ public class IHMAjoutFormation extends JFrame {
         // Add functionality to buttons here (e.g., handle form submission and cancellation)
     }
 
-    public static void main(String[] args) {
-        new IHMAjoutFormation();
-    }
+
 
 }

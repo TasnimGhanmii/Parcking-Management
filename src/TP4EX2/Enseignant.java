@@ -1,61 +1,28 @@
-/*package TP4EX2;
+package TP4EX2;
 
-public class Enseignant {
+class Enseignant extends Personne
+{
+     String grade,speacialte;
 
-    int id;
-    String Titre;
-   Date DateF;
-    String Lieu;
-    boolean certification;
-
-
-    Enseignant(int id,String Titre,Date DateF,String lieu,boolean certif)
-    {
-        this.id=id;
-        this.Titre=Titre;
-        this.certification=certif;
-        this.DateF=DateF;
-        Lieu=lieu;
-
+    public Enseignant(int id, String nom, String prenom,String grade ,String specialte ) {
+        super(id, nom, prenom);
+        this.grade=grade;
+        this.speacialte=specialte;
     }
 
-    public int getId() {
-        return id;
+    public String getGrade() {
+        return grade;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setGrade(String grade) {
+        this.grade = grade;
     }
 
-    public String getTitre() {
-        return Titre;
+    public String getSpeacialte() {
+        return speacialte;
     }
 
-    public void setTitre(String titre) {
-        Titre = titre;
+    public void setSpeacialte(String speacialte) {
+        this.speacialte = speacialte;
     }
-
-    public Date getDateF() {
-        return DateF;
-    }
-
-    public void setDateF(Date dateF) {
-        DateF = dateF;
-    }
-
-    public String getLieu() {
-        return Lieu;
-    }
-
-    public void setLieu(String lieu) {
-        Lieu = lieu;
-    }
-
-    public boolean isCertification() {
-        return certification;
-    }
-
-    public void setCertification(boolean certification) {
-        this.certification = certification;
-    }
-}*/
+}

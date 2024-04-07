@@ -1,29 +1,15 @@
+/*import TP4EX2.IHM.DataBase.MyConnection;
+
 import java.sql.*;
 
 public class EtudiantDAO {
     Connection con = null;
-    EtudiantDAO(String url,String username,String password){
+    public EtudiantDAO(String url, String username, String password){
 
         con= MyConnection.getConnection(url,username,password);
     }
 
 
-    /*public int insertEtudiant(String nom, String prenom, int cin, double moyenne) {
-        int a = 0;
-        String req1 = "insert into etudiant values ('" + nom + "','" + prenom + "','" + cin + "','" + moyenne + "')";
-        try {
-            Statement st = con.createStatement();
-            if (st != null) {
-                  a = st.executeUpdate(req1);
-                //nbr des tuples modifiés
-               //  System.out.println(a);
-               // return a;
-            }
-        } catch (SQLException e) {
-           // System.out.println("Erreur"+e.getMessage());
-        }
-        return a ;
-    }*/
     public int insertEtudiant(String nom, String prenom, int cin, double moyenne) {
         String req1 = "insert into etudiant values (?,?,?,?)";
         try {
@@ -39,6 +25,8 @@ public class EtudiantDAO {
 
 
     }
+
+
 
 
     public ResultSet selection(String req) {
@@ -93,8 +81,8 @@ public class EtudiantDAO {
         }
     }
 
-    /*@Override
-    public void afficheAll(String req) {
+
+   /* public void afficheAll(String req) {
         try {
         Statement st = con.createStatement();
 
@@ -111,4 +99,6 @@ public class EtudiantDAO {
             System.out.println("Erreur"+e.getMessage());
         }
     }*/
-}
+
+
+/*}*/

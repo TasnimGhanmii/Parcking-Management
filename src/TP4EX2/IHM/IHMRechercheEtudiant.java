@@ -18,6 +18,8 @@ public class IHMRechercheEtudiant extends JFrame {
         initializeComponents();
         createLayout();
         addActionListeners();
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setVisible(true);
     }
 
     private void initializeComponents() {
@@ -125,9 +127,5 @@ public class IHMRechercheEtudiant extends JFrame {
             }
         });
 
-    }
+    }}
 
-    public static void main(String[] args) {
-        new IHMRechercheEtudiant().setVisible(true);
-    }
-}

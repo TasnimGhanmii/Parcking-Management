@@ -1,10 +1,10 @@
+/*package TP4EX2.IHM.DataBase;
+
 import TP4EX2.IHM.DataBase.EtudiantDAO;
 
 import javax.swing.*;
 import javax.swing.table.AbstractTableModel;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class MyTableModel extends AbstractTableModel {
@@ -78,12 +78,11 @@ public class MyTableModel extends AbstractTableModel {
         }
         return -1;
     }
-    @Override
 
-    public void insertEtudiant(String nom,String prenom,int cin,double moyenne)
-    {    int a=dao.insertEtudiant(nom,prenom,cin,moyenne);
+    public void AjouterEtudiant(int id,String nom,String prenom,String filiere,int niveau,int groupe)
+    {    int a=dao.AjouterEtudiant(id,nom,prenom,filiere,niveau,groupe);
         if(a>0) {
-            data.add(new Object[]{nom, prenom, cin, moyenne});
+            data.add(new Object[]{AjouterEtudiant(id,nom,prenom,filiere,niveau,groupe});
             //refraiche (de l'affichage)
             fireTableDataChanged();
             JOptionPane.showMessageDialog(null,"done");
@@ -91,4 +90,4 @@ public class MyTableModel extends AbstractTableModel {
         else
             JOptionPane.showMessageDialog(null,"error detected");
     }
-}
+}*/

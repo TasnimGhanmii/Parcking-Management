@@ -1,14 +1,12 @@
+import TP4EX2.IHM.DataBase.Config;
+import TP4EX2.IHM.DataBase.EtudiantDAO;
+import TP4EX2.IHM.DataBase.MyTableModel;
+
 import javax.swing.*;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.Date;
 
 public class GestionEtudiant extends JFrame{
      MyTableModel model;

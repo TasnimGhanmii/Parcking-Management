@@ -18,6 +18,9 @@ public class IHMRechercheFormation extends JFrame {
         initializeComponents();
         createLayout();
         addActionListeners();
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+        setVisible(true);
     }
 
     private void initializeComponents() {
@@ -119,7 +122,5 @@ public class IHMRechercheFormation extends JFrame {
         });
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new IHMRechercheFormation().setVisible(true));
-    }
+
 }

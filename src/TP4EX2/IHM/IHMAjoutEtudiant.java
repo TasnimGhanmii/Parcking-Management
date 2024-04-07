@@ -17,6 +17,10 @@ public class IHMAjoutEtudiant extends JFrame {
         initializeComponents();
         createLayout();
         addActionListeners();
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+        this.setVisible(true);
+
     }
 
     private void initializeComponents() {
@@ -32,7 +36,7 @@ public class IHMAjoutEtudiant extends JFrame {
         lastNameField = new JTextField(20);
 
         // Sample data for comboboxes (replace with actual data source)
-        String[] programs = {"FIA1","FIA2","FIA3","FIA4"};
+        String[] programs = {"FIA1", "FIA2", "FIA3", "FIA4"};
         programComboBox = new JComboBox<>(programs);
         String[] levels = {"Licence 1", "Licence 2", "Licence 3"};
         levelComboBox = new JComboBox<>(levels);
@@ -72,7 +76,7 @@ public class IHMAjoutEtudiant extends JFrame {
         addComponent(panel, buttonPanel, c, 0, 6, 3, 1);
 
         getContentPane().add(panel);
-        setSize(800,400);
+        setSize(800, 400);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
@@ -84,6 +88,8 @@ public class IHMAjoutEtudiant extends JFrame {
         c.gridheight = height;
         panel.add(component, c);
     }
+
+
 
     private void addActionListeners() {
         addButton.addActionListener(new ActionListener() {
@@ -97,8 +103,5 @@ public class IHMAjoutEtudiant extends JFrame {
         });
 
     }
-
-    public static void main(String[] args) {
-        new IHMAjoutEtudiant().setVisible(true);
-    }
 }
+
