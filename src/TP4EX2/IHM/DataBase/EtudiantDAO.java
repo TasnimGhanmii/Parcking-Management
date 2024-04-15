@@ -11,7 +11,7 @@ public class EtudiantDAO {
 
 
 
-    public int AjouterEtudiant(int id,String nom,String prenom,String filiere,int niveau,int grp)
+    public int AjouterEtudiant(int id,String nom,String prenom,String filiere,String niveau,String grp)
     {
         String req="insert into etudiant values (?,?,?,?,?,?)";
 
@@ -20,8 +20,8 @@ public class EtudiantDAO {
             ps.setString(1,nom);
             ps.setString(2,prenom);
             ps.setString(3,filiere);
-            ps.setInt(4,niveau);
-            ps.setInt(5,grp);
+            ps.setString(4,niveau);
+            ps.setString(5,grp);
             return ps.executeUpdate();
         } catch (SQLException e) {
             return 0;

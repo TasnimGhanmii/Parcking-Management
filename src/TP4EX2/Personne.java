@@ -1,9 +1,9 @@
 package TP4EX2;
 
 abstract public class Personne {
-    int id;
-    String nom;
-    String prenom;
+   public int id;
+   public String nom;
+   public String prenom;
 
     public Personne(int id, String nom, String prenom) {
         this.id = id;

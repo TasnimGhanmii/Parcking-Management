@@ -21,8 +21,7 @@ public class InterfacePrincipale extends JInternalFrame implements ActionListene
         this.setResizable(true);
         this.setClosable(true);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-         desktop = new JDesktopPane();
-        this.add(desktop);
+
 
         Formation=new JMenu("formation");
         Etudiant=new JMenu("etudiant");

@@ -1,27 +1,32 @@
 package TP4EX2.IHM;
 
+import TP4EX2.IHM.DataBase.EtudiantDAO;
+import TP4EX2.IHM.DataBase.Config ;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class IHMAjoutEtudiant extends JFrame {
-
+    EtudiantDAO dao;
     private JLabel studentIdLabel, firstNameLabel, lastNameLabel, programLabel, levelLabel, groupLabel;
     private JTextField studentIdField, firstNameField, lastNameField;
     private JComboBox<String> programComboBox, levelComboBox, groupComboBox;
     private JButton addButton, cancelButton;
 
     public IHMAjoutEtudiant() {
+
         super("Ajout d'un étudiant"); // "Adding a student"
         initializeComponents();
         createLayout();
         addActionListeners();
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-
+         dao=new EtudiantDAO(Config.URL,Config.USERNAME,Config.PASSWORD);
         this.setVisible(true);
 
     }
+
 
     private void initializeComponents() {
         studentIdLabel = new JLabel("Numéro de carte ETD :"); // "Student ID card number"
@@ -81,6 +86,7 @@ public class IHMAjoutEtudiant extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
+
     private void addComponent(JPanel panel, JComponent component, GridBagConstraints c, int x, int y, int width, int height) {
         c.gridx = x;
         c.gridy = y;
@@ -95,8 +101,12 @@ public class IHMAjoutEtudiant extends JFrame {
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Add validation and logic to save student information
-                JOptionPane.showMessageDialog(null, "Saving student information...");
+                if(e.getSource()==addButton)
+                {
+                   dao.AjouterEtudiant(Integer.parseInt(studentIdField.getText()),firstNameField.getText(), lastNameField.getText(), programComboBox.getSelectedItem().toString(),
+                           levelComboBox.getSelectedItem().toString(),groupComboBox.getSelectedItem().toString());
+                    JOptionPane.showMessageDialog(null, "Saving student information...");
+                }
                 // Close the form after successful saving (optional)
                 dispose();
             }
