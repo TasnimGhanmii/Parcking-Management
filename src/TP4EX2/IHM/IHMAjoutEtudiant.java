@@ -106,9 +106,12 @@ public class IHMAjoutEtudiant extends JFrame {
                    dao.AjouterEtudiant(Integer.parseInt(studentIdField.getText()),firstNameField.getText(), lastNameField.getText(), programComboBox.getSelectedItem().toString(),
                            levelComboBox.getSelectedItem().toString(),groupComboBox.getSelectedItem().toString());
                     JOptionPane.showMessageDialog(null, "Saving student information...");
+                    // Close the form after successful saving (optional)
+                    dispose();
                 }
-                // Close the form after successful saving (optional)
-                dispose();
+
+
+
             }
         });
 
