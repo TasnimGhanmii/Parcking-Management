@@ -1,4 +1,5 @@
-import TP4EX2.IHM.DataBase.EtudiantDAO;
+import DB.EtudiantDAO;
+import DB.EtudiantDAO;
 
 import javax.swing.*;
 import javax.swing.table.AbstractTableModel;
@@ -78,7 +79,7 @@ public class MyTableModel extends AbstractTableModel {
         }
         return -1;
     }
-    @Override
+
 
     public void insertEtudiant(String nom,String prenom,int cin,double moyenne)
     {    int a=dao.insertEtudiant(nom,prenom,cin,moyenne);

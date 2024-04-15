@@ -30,7 +30,7 @@ public class EtudiantDAO {
     }
 
     public void RechercherEtudiant(int studentId) throws SQLException {
-        String sql = "SELECT * FROM students WHERE id = ?";
+        String sql = "SELECT * FROM etudiant WHERE id = ?";
         PreparedStatement statement = con.prepareStatement(sql);
         statement.setInt(1, studentId);
         ResultSet resultSet = statement.executeQuery();
@@ -64,7 +64,7 @@ public class EtudiantDAO {
 
     public void afficher(int studentId) {
         try {
-           String req= "SELECT * FROM students WHERE id = ?";
+           String req= "SELECT * FROM etudiant WHERE id = ?";
             PreparedStatement statement = con.prepareStatement(req);
             statement.setInt(1, studentId);
             ResultSet resultSet = statement.executeQuery();

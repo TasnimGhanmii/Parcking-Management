@@ -1,6 +1,5 @@
-import TP4EX2.IHM.DataBase.Config;
-import TP4EX2.IHM.DataBase.EtudiantDAO;
-import TP4EX2.IHM.DataBase.MyTableModel;
+import DB.Config;
+import DB.EtudiantDAO;
 
 import javax.swing.*;
 import java.awt.*;
